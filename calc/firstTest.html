@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first WebPage</title>
+	<style>
+	body 
+	{
+		background-image: url("aslibg1.jpg");
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover; 
+	}
+	h1{
+		color: white;
+	}
+	.erM{
+		font-size: 60px;
+		font-family: monospace;
+		color: lightgreen;
+	}
+	.button {
+ 	   	background-color: lightgreen;  /* #4CAF50*/
+    	border: 2px solid #4CAF50;
+    	color: black;
+    	padding: 15px 32px;
+    	text-align: center;
+    	text-decoration: none;
+    	/*display: inline-block;*/
+    	font-size: 16px;
+    	margin: 4px 10px;
+    	cursor: pointer;
+    	height:50px;
+    	width:90px;
+	}
+	.buttonDot{
+		border:2px solid #7fff00;
+	}
+	.buttonClear{
+		border:2px solid red;
+	}
+	h2{
+		color: white;
+		margin-left: 20px;
+		display: inline;
+		font-size: 40px;
+	}
+	.result{
+		font-style: italic;
+		font-size: 50px;
+		color:skyblue;
+	}
+	.buttonEqual{
+		border: 2px solid red;
+	}
+</style>
+<script src="calu.js"></script>
+</head>
+<body>
+
+	
+	<h1>Calculator</h1>
+	
+	<div>
+		<button class="button button1" onclick="buttonPressed(1)">1</button>
+		<button class="button button2" onclick="buttonPressed(2)">2</button>
+		<button class="button button3" onclick="buttonPressed(3)">3</button>
+		<button class="button buttonAdd" onclick="buttonOp('+')">+</button>
+		<button class="button buttonSin" onclick="buttonOp('sin')">sin</button>
+		<h2 id="op1"></h2>
+
+	</div>
+	<div>
+		<button class="button button4" onclick="buttonPressed(4)">4</button>
+		<button class="button button5" onclick="buttonPressed(5)">5</button>
+		<button class="button button6" onclick="buttonPressed(6)">6</button>
+		<button class="button buttonSub" onclick="buttonOp('-')">-</button>
+		<button class="button buttonCos" onclick="buttonOp('cos')">cos</button>
+		<h2 id="operator"></h2>
+	</div>
+	<div>
+		<button class="button button7" onclick="buttonPressed(7)">7</button>
+		<button class="button button8" onclick="buttonPressed(8)">8</button>
+		<button class="button button9" onclick="buttonPressed(9)">9</button>
+		<button class="button buttonMul" onclick="buttonOp('*')">*</button>
+		<button class="button buttonLog" onclick="buttonOp('log')">log</button>
+		<h2 id="op2"></h2>
+	</div>
+	<div>
+		<button class="button buttonDot" onclick="buttonPressed('.')">.</button>
+		<button class="button button0" onclick="buttonPressed(0)">0</button>
+		<button class="button buttonClear" onclick="clearAll()">AC</button>
+		<button class="button buttonDiv" onclick="buttonOp('/')">/</button>
+		<button class="button buttonEqual" onclick="buttonEqual()">=</button>
+		<h2 class="result" id="resultField"></h2>
+	</div>
+	<div>
+		<h1 id="errMessage" class="erM"></h1>
+	</div>>
+</body>	
+</html>
